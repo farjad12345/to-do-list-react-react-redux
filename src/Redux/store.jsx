@@ -1,4 +1,5 @@
-import { legacy_createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import todoApp from "./store/Todos";
-  const store = legacy_createStore(todoApp);
-  export default store
+const store = configureStore({
+  reducer: todoApp,
+});  export default store
